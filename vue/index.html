@@ -13,6 +13,13 @@
     <div id="app">
         <header>
             <i class="fab fa-spotify"></i> 
+            <form method="get">
+                <select @change="search" name="genre-filter" id="genre-filter">
+                    <option v-for="genre in arrGenre" :key="genre" :value="genre">
+                        {{ genre }}
+                    </option>
+                </select>
+            </form>
         </header>
         <main class="p-5">
             <div class="container">
